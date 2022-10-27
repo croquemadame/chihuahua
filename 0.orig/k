@@ -40,13 +40,13 @@ boundaryField
         value           $internalField;
     }
 
-    motorBikeGroup
+    chihuahua
     {
         type            kqRWallFunction;
         value           $internalField;
     }
 
-    #include "include/frontBackUpperPatches"
+    #include "include/sideUpperPatches"
 }
 
 

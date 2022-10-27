@@ -29,7 +29,7 @@ near
     );
 
     // Patches/groups to sample (regular expressions)
-    patches         (motorBikeGroup);
+    patches         (chihuahua);
 
     // Distance to sample
     distance        0.001;
@@ -68,7 +68,7 @@ wallBoundedStreamLines
 
         patchSeedCoeffs
         {
-            patches     (motorBikeGroup);
+            patches     (chihuahua);
             axis        x;  //distance;
             maxPoints   20000;
         }

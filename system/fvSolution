@@ -31,11 +31,12 @@ solvers
 
     U
     {
-        solver          smoothSolver;
-        smoother        GaussSeidel;
+        solver          PBiCGStab ;//smoothSolver;
+        preconditioner  DILU;
+        //smoother        GaussSeidel;
         tolerance       1e-8;
         relTol          0.1;
-        nSweeps         1;
+        //nSweeps         1;
     }
 
     k

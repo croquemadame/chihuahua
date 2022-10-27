@@ -40,12 +40,12 @@ boundaryField
         type            zeroGradient;
     }
 
-    motorBikeGroup
+    chihuahua
     {
         type            zeroGradient;
     }
 
-    #include "include/frontBackUpperPatches"
+    #include "include/sideUpperPatches"
 }
 
 

@@ -22,7 +22,7 @@ boundaryField
 {
     #includeEtc "caseDicts/setConstraintTypes"
 
-    frontAndBack
+    sides
     {
         type            calculated;
         value           uniform 0;
@@ -52,7 +52,7 @@ boundaryField
         value           uniform 0;
     }
 
-    motorBikeGroup
+    chihuahua
     {
         type            nutkWallFunction;
         value           uniform 0;

@@ -16,16 +16,23 @@ FoamFile
 
 scale   1;
 
+xmin	5;
+xmax	15;
+ymin	4;
+ymax	4;
+zmin	0;
+zmax	8;
+
 vertices
 (
-    (-5 -4 0)
-    (15 -4 0)
-    (15  4 0)
-    (-5  4 0)
-    (-5 -4 8)
-    (15 -4 8)
-    (15  4 8)
-    (-5  4 8)
+    (-$xmin -$ymin $zmin)
+    ($xmax -$ymin $zmin)
+    ($xmax $ymax $zmin)
+    (-$xmin $ymax $zmin)
+    (-$xmin -$ymin $zmax)
+    ($xmax -$ymin $zmax)
+    ($xmax $ymax $zmax)
+    (-$xmin $ymax $zmax)
 );
 
 blocks
@@ -39,7 +46,7 @@ edges
 
 boundary
 (
-    frontAndBack
+    sides
     {
         type patch;
         faces

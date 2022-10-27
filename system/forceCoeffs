@@ -15,18 +15,18 @@ forceCoeffs1
     writeControl    timeStep;
     timeInterval    1;
 
-    log             yes;
+    log             no;
 
-    patches         (motorBikeGroup);
+    patches         (chihuahua);
     rho             rhoInf;      // Indicates incompressible
     rhoInf          1;           // Required when rho = rhoInf
     liftDir         (0 0 1);
     dragDir         (1 0 0);
-    CofR            (0.72 0 0);  // Axle midpoint on ground
+    CofR            (0.4 0 0);  // Axle midpoint on ground
     pitchAxis       (0 1 0);
     magUInf         20;
-    lRef            1.42;        // Wheelbase length
-    Aref            0.75;        // Estimated
+    lRef            1.2;        // Wheelbase length (in this case, paws)
+    Aref            1.0745783307989651;        // Estimated
 }
 
 /*
@@ -36,7 +36,7 @@ binField1
     libs                    (fieldFunctionObjects);
     binModel                singleDirectionUniformBin;
     fields                  (forceCoeff);
-    patches                 (motorBikeGroup);
+    patches                 (chihuahua);
     decomposePatchValues    true;
     CofR                    ${..forceCoeffs1.CofR};
 

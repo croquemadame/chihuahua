@@ -39,13 +39,13 @@ boundaryField
         value           $internalField;
     }
 
-    motorBikeGroup
+    chihuahua
     {
         type            omegaWallFunction;
         value           $internalField;
     }
 
-    #include "include/frontBackUpperPatches"
+    #include "include/sideUpperPatches"
 }
 
 
