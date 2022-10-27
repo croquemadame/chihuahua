@@ -1,0 +1,9 @@
+residuals                                                                   
+    {                                                                           
+        type            solverInfo;                                             
+        libs            (utilityFunctionObjects);                               
+        writeResidualFields yes;                                                
+        writeControl    writeTime;                                              
+        fields          (U p);                                                  
+    }
+

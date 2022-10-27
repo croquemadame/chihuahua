@@ -1,0 +1,21 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+
+export TMPDIR=/tmp # Apeans para macOS X
+
+touch chihuahua.foam
+
+runApplication blockMesh
+runApplication surfaceFeatureExtract
+runApplication decomposePar
+runParallel snappyHexMesh -overwrite
+runApplication reconstructParMesh -constant
+restore0Dir
+rm -rf processor*
+runApplication -s 2 decomposePar -cellDist
+runParallel $(getApplication)
+runApplication reconstructPar
+
+#------------------------------------------------------------------------------
